@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ferretería El Tornillo | Herramientas y materiales</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <!-- TOP BAR -->
+  <div class="topbar py-2 d-none d-lg-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex gap-3 align-items-center text-white-50 small">
+        <span><i class="bi bi-geo-alt"></i> Tucumán</span>
+        <span><i class="bi bi-clock"></i> Lun–Sáb 8:00–13:00 / 17:00–21:00</span>
+        <span><i class="bi bi-truck"></i> Envíos locales</span>
+      </div>
+      <div class="d-flex gap-2">
+        <a class="btn btn-sm btn-outline-light" href="#articulos"><i class="bi bi-grid-3x3-gap"></i> Catálogo</a>
+        <a class="btn btn-sm btn-success" id="waTopLink" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top nav-glow">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
+        <span class="brand-badge">🔩</span>
+        Ferretería El Tornillo
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item"><a class="nav-link" href="#articulos">Artículos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#opiniones">Opiniones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+
+        <div class="d-flex gap-2 ms-lg-3 mt-3 mt-lg-0">
+          <a class="btn btn-outline-light" href="#articulos"><i class="bi bi-lightning-charge"></i> Ver ofertas</a>
+          <a class="btn btn-success" id="waHeaderLink" target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container py-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge text-bg-warning"><i class="bi bi-truck"></i> Envíos en el día</span>
+            <span class="badge text-bg-info"><i class="bi bi-box-seam"></i> Retiro en local</span>
+            <span class="badge text-bg-success"><i class="bi bi-shield-check"></i> Asesoramiento</span>
+          </div>
+
+          <h1 class="display-5 fw-bold text-white mb-3 hero-title">
+            Todo para tu casa y tu obra, <span class="text-highlight">en un solo lugar</span>
+          </h1>
+
+          <p class="lead text-white-50 mb-4">
+            Herramientas, electricidad, plomería, pintura y seguridad.
+            Pedí por WhatsApp y te armamos el pedido en minutos.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary btn-lg" href="#articulos"><i class="bi bi-grid-3x3-gap"></i> Ver artículos</a>
+            <a class="btn btn-outline-light btn-lg" id="waHeroLink" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp"></i> Consultar por WhatsApp
+            </a>
+          </div>
+
+          <div class="hero-stats mt-4">
+            <div class="stat">
+              <div class="stat__num">+250</div>
+              <div class="stat__txt">Productos</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">⚡</div>
+              <div class="stat__txt">Respuesta rápida</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">✔</div>
+              <div class="stat__txt">Calidad</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="hero-card p-4 rounded-4">
+            <div class="d-flex justify-content-between align-items-start gap-3">
+              <div>
+                <h5 class="fw-semibold mb-1">Promos de la semana</h5>
+                <p class="text-white-50 mb-3 small">Aprovechá antes que se termine.</p>
+              </div>
+              <span class="pill">OFERTAS</span>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-12">
+                <div class="mini-offer">
+                  <i class="bi bi-cash-coin"></i>
+                  <div>
+                    <div class="fw-semibold">10% OFF</div>
+                    <div class="small text-white-50">Pagando en efectivo</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="mini-offer">
+                  <i class="bi bi-bag-check"></i>
+                  <div>
+                    <div class="fw-semibold">Combos</div>
+                    <div class="small text-white-50">Fijaciones + tarugos</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="mini-offer">
+                  <i class="bi bi-truck"></i>
+                  <div>
+                    <div class="fw-semibold">Envíos</div>
+                    <div class="small text-white-50">Consultá tu zona</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-grid mt-3">
+              <a class="btn btn-success btn-lg" id="waPromoLink" target="_blank" rel="noopener">
+                <i class="bi bi-whatsapp"></i> Pedir por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shape separador -->
+    <svg class="hero-wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,64L80,58.7C160,53,320,43,480,53.3C640,64,800,96,960,101.3C1120,107,1280,85,1360,74.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+    </svg>
+  </header>
+
+  <!-- BENEFICIOS -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card h-100">
+            <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
+            <h5 class="fw-semibold mb-1">Compra rápida</h5>
+            <p class="text-secondary mb-0">Elegís productos y consultás por WhatsApp con 1 click.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card h-100">
+            <div class="feature-icon"><i class="bi bi-award"></i></div>
+            <h5 class="fw-semibold mb-1">Calidad garantizada</h5>
+            <p class="text-secondary mb-0">Te recomendamos lo correcto para tu trabajo.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card h-100">
+            <div class="feature-icon"><i class="bi bi-truck"></i></div>
+            <h5 class="fw-semibold mb-1">Envíos</h5>
+            <p class="text-secondary mb-0">Coordinamos entrega según zona y disponibilidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTÍCULOS -->
+  <section id="articulos" class="py-5 section-soft">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+        <div>
+          <h2 class="fw-bold mb-1">Artículos destacados</h2>
+          <p class="text-secondary mb-0">Cards parejas + imágenes completas (sin recorte).</p>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-search"></i></span>
+            <input id="searchInput" class="form-control" style="min-width: 260px;" type="search"
+              placeholder="Buscar (ej: taladro, guantes, cable)..." />
+          </div>
+
+          <select id="categorySelect" class="form-select" style="min-width: 220px;">
+            <option value="all" selected>Todas las categorías</option>
+            <option value="herramientas">Herramientas</option>
+            <option value="electricidad">Electricidad</option>
+            <option value="seguridad">Seguridad</option>
+            <option value="pintura">Pintura</option>
+          </select>
+
+          <button id="btnClearFilters" class="btn btn-outline-dark">
+            <i class="bi bi-x-circle"></i> Limpiar
+          </button>
+        </div>
+      </div>
+
+      <div id="productsGrid" class="row g-4">
+        <!-- PRODUCTO 1 -->
+        <div class="col-12 col-sm-6 col-lg-4 product-item"
+             data-name="Taladro percutor 700W" data-cat="herramientas"
+             data-desc="Ideal para pared y mampostería. Incluye maletín."
+             data-img="img/taladro.png" data-price="$ 89.999"
+             data-tags="Oferta,Potente,Popular">
+          <div class="card h-100 shadow-sm product-card lift">
+            <div class="card-top">
+              <span class="tag tag-hot"><i class="bi bi-fire"></i> HOT</span>
+              <span class="tag tag-off"><i class="bi bi-percent"></i> -10%</span>
+            </div>
+            <div class="img-box">
+              <img src="img/taladro.png" class="product-img" alt="Taladro percutor 700W" />
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-1">Taladro percutor 700W</h5>
+              <p class="card-text text-secondary small mb-3">Ideal para pared y mampostería. Incluye maletín.</p>
+
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-bg-light border"><i class="bi bi-lightning"></i> 700W</span>
+                <span class="badge text-bg-light border"><i class="bi bi-hammer"></i> Percutor</span>
+              </div>
+
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <span class="price fw-bold">$ 89.999</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-dark btn-sm btn-details"><i class="bi bi-eye"></i></button>
+                  <button class="btn btn-success btn-sm wa-product" data-product="Taladro percutor 700W" data-price="$ 89.999">
+                    <i class="bi bi-whatsapp"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRODUCTO 2 -->
+        <div class="col-12 col-sm-6 col-lg-4 product-item"
+             data-name="Amoladora 4 1/2 800W" data-cat="herramientas"
+             data-desc="Corte y desbaste. Mango lateral antivibración."
+             data-img="img/amoladora.png" data-price="$ 74.500"
+             data-tags="Recomendada,Corte,800W">
+          <div class="card h-100 shadow-sm product-card lift">
+            <div class="card-top">
+              <span class="tag tag-new"><i class="bi bi-stars"></i> TOP</span>
+            </div>
+            <div class="img-box">
+              <img src="img/amoladora.png" class="product-img" alt="Amoladora 4 1/2 800W" />
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-1">Amoladora 4 1/2 - 800W</h5>
+              <p class="card-text text-secondary small mb-3">Corte y desbaste. Mango lateral antivibración.</p>
+
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-bg-light border"><i class="bi bi-gear"></i> 4 1/2</span>
+                <span class="badge text-bg-light border"><i class="bi bi-lightning"></i> 800W</span>
+              </div>
+
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <span class="price fw-bold">$ 74.500</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-dark btn-sm btn-details"><i class="bi bi-eye"></i></button>
+                  <button class="btn btn-success btn-sm wa-product" data-product="Amoladora 4 1/2 - 800W" data-price="$ 74.500">
+                    <i class="bi bi-whatsapp"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRODUCTO 3 -->
+        <div class="col-12 col-sm-6 col-lg-4 product-item"
+             data-name="Cable taller 2.5mm x 10m" data-cat="electricidad"
+             data-desc="Reforzado. Ideal herramientas y extensiones."
+             data-img="img/cable-taller.png" data-price="$ 12.990"
+             data-tags="Electricidad,Refuerzo,10m">
+          <div class="card h-100 shadow-sm product-card lift">
+            <div class="card-top">
+              <span class="tag tag-off"><i class="bi bi-percent"></i> OFERTA</span>
+            </div>
+            <div class="img-box">
+              <img src="img/cable-taller.png" class="product-img" alt="Cable taller 2.5mm x 10m" />
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-1">Cable taller 2.5mm x 10m</h5>
+              <p class="card-text text-secondary small mb-3">Reforzado. Ideal herramientas y extensiones.</p>
+
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-bg-light border"><i class="bi bi-plug"></i> 2.5mm</span>
+                <span class="badge text-bg-light border"><i class="bi bi-rulers"></i> 10m</span>
+              </div>
+
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <span class="price fw-bold">$ 12.990</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-dark btn-sm btn-details"><i class="bi bi-eye"></i></button>
+                  <button class="btn btn-success btn-sm wa-product" data-product="Cable taller 2.5mm x 10m" data-price="$ 12.990">
+                    <i class="bi bi-whatsapp"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRODUCTO 4 -->
+        <div class="col-12 col-sm-6 col-lg-4 product-item"
+             data-name="Guantes de nitrilo reforzados" data-cat="seguridad"
+             data-desc="Agarre alto, resistentes a aceites. Talles varios."
+             data-img="img/guuantes-nitilo.png" data-price="$ 5.800"
+             data-tags="Seguridad,Resistentes,Trabajo">
+          <div class="card h-100 shadow-sm product-card lift">
+            <div class="card-top">
+              <span class="tag tag-new"><i class="bi bi-shield-check"></i> PRO</span>
+            </div>
+            <div class="img-box">
+              <img src="img/guuantes-nitilo.png" class="product-img" alt="Guantes de nitrilo reforzados" />
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-1">Guantes de nitrilo reforzados</h5>
+              <p class="card-text text-secondary small mb-3">Agarre alto, resistentes a aceites. Talles varios.</p>
+
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-bg-light border"><i class="bi bi-droplet"></i> Aceites</span>
+                <span class="badge text-bg-light border"><i class="bi bi-hand-index-thumb"></i> Antidesliz</span>
+              </div>
+
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <span class="price fw-bold">$ 5.800</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-dark btn-sm btn-details"><i class="bi bi-eye"></i></button>
+                  <button class="btn btn-success btn-sm wa-product" data-product="Guantes de nitrilo reforzados" data-price="$ 5.800">
+                    <i class="bi bi-whatsapp"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRODUCTO 5 -->
+        <div class="col-12 col-sm-6 col-lg-4 product-item"
+             data-name="Pintura látex interior 4L" data-cat="pintura"
+             data-desc="Buen cubritivo. Blanco y colores (consultar stock)."
+             data-img="img/pintura-latex.png" data-price="$ 19.990"
+             data-tags="Pintura,Interior,4L">
+          <div class="card h-100 shadow-sm product-card lift">
+            <div class="card-top">
+              <span class="tag tag-new"><i class="bi bi-brush"></i> HOME</span>
+            </div>
+            <div class="img-box">
+              <img src="img/pintura-latex.png" class="product-img" alt="Pintura látex interior 4L" />
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-1">Pintura látex interior 4L</h5>
+              <p class="card-text text-secondary small mb-3">Buen cubritivo. Blanco y colores (consultar stock).</p>
+
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-bg-light border"><i class="bi bi-house"></i> Interior</span>
+                <span class="badge text-bg-light border"><i class="bi bi-droplet-half"></i> 4L</span>
+              </div>
+
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <span class="price fw-bold">$ 19.990</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-dark btn-sm btn-details"><i class="bi bi-eye"></i></button>
+                  <button class="btn btn-success btn-sm wa-product" data-product="Pintura látex interior 4L" data-price="$ 19.990">
+                    <i class="bi bi-whatsapp"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRODUCTO 6 -->
+        <div class="col-12 col-sm-6 col-lg-4 product-item"
+             data-name="Linterna recargable LED" data-cat="seguridad"
+             data-desc="Alta potencia, ideal cortes de luz. Cable incluido."
+             data-img="img/linterna-led.png" data-price="$ 9.450"
+             data-tags="LED,Recargable,Emergencia">
+          <div class="card h-100 shadow-sm product-card lift">
+            <div class="card-top">
+              <span class="tag tag-hot"><i class="bi bi-lightbulb"></i> LED</span>
+            </div>
+            <div class="img-box">
+              <img src="img/linterna-led.png" class="product-img" alt="Linterna recargable LED" />
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title mb-1">Linterna recargable LED</h5>
+              <p class="card-text text-secondary small mb-3">Alta potencia, ideal cortes de luz. Cable incluido.</p>
+
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-bg-light border"><i class="bi bi-battery-charging"></i> Recargable</span>
+                <span class="badge text-bg-light border"><i class="bi bi-lightbulb"></i> LED</span>
+              </div>
+
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <span class="price fw-bold">$ 9.450</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-dark btn-sm btn-details"><i class="bi bi-eye"></i></button>
+                  <button class="btn btn-success btn-sm wa-product" data-product="Linterna recargable LED" data-price="$ 9.450">
+                    <i class="bi bi-whatsapp"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-4 text-secondary small">
+        *Imágenes ilustrativas. Precios de ejemplo.
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="py-5 bg-light">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-4">
+        <div>
+          <h2 class="fw-bold mb-1">Servicios</h2>
+          <p class="text-secondary mb-0">Te ayudamos a resolver, sin vueltas.</p>
+        </div>
+        <a class="btn btn-success" id="waServicesLink" target="_blank" rel="noopener">
+          <i class="bi bi-whatsapp"></i> Consultar servicios
+        </a>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded-4 shadow-sm h-100 service-card">
+            <div class="service-ico"><i class="bi bi-scissors"></i></div>
+            <h5 class="fw-semibold">Corte a medida</h5>
+            <p class="text-secondary mb-0">Cortes en varilla, cable y materiales (según disponibilidad).</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded-4 shadow-sm h-100 service-card">
+            <div class="service-ico"><i class="bi bi-bag-check"></i></div>
+            <h5 class="fw-semibold">Armado de pedido</h5>
+            <p class="text-secondary mb-0">Mandás lista por WhatsApp y lo dejamos listo para retirar.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded-4 shadow-sm h-100 service-card">
+            <div class="service-ico"><i class="bi bi-truck"></i></div>
+            <h5 class="fw-semibold">Envíos</h5>
+            <p class="text-secondary mb-0">Envíos locales. Consultá costo según zona.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPINIONES -->
+  <section id="opiniones" class="py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Opiniones</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 border bg-white shadow-sm">
+            <div class="d-flex justify-content-between">
+              <div class="fw-semibold">Carlos</div>
+              <div class="text-warning">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <p class="text-secondary mt-2 mb-0">“Me armaron el pedido por WhatsApp y lo retiré en 10 minutos.”</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 border bg-white shadow-sm">
+            <div class="d-flex justify-content-between">
+              <div class="fw-semibold">Mica</div>
+              <div class="text-warning">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+              </div>
+            </div>
+            <p class="text-secondary mt-2 mb-0">“Buena atención y recomendaciones. Volvería a comprar.”</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 rounded-4 border bg-white shadow-sm">
+            <div class="d-flex justify-content-between">
+              <div class="fw-semibold">Leo</div>
+              <div class="text-warning">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <p class="text-secondary mt-2 mb-0">“Precios claros, y el botón de WhatsApp es una bomba.”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-5 section-soft">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-3">Contacto</h2>
+          <p class="text-secondary">
+            ¿Precio, stock o envío? Escribinos por WhatsApp y te respondemos rápido.
+          </p>
+
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-success btn-lg" id="waContactLink" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp"></i> Hablar por WhatsApp
+            </a>
+            <button class="btn btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#infoModal">
+              <i class="bi bi-info-circle"></i> Ver info
+            </button>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="p-4 rounded-4 border bg-white shadow-sm">
+            <div class="d-flex justify-content-between flex-wrap gap-2">
+              <div>
+                <div class="fw-semibold">Dirección</div>
+                <div class="text-secondary">Tu dirección acá, Tucumán</div>
+              </div>
+              <div>
+                <div class="fw-semibold">Teléfono</div>
+                <div class="text-secondary">+54 381 000-0000</div>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="d-flex gap-2 flex-wrap">
+              <a class="btn btn-outline-dark" href="#articulos"><i class="bi bi-grid"></i> Volver al catálogo</a>
+              <a class="btn btn-success" id="waFooterLink" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Consultar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 bg-dark text-white-50">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <div>© <span id="year"></span> Ferretería El Tornillo</div>
+      <div class="small">Hecho con Bootstrap + JS</div>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a id="waFloatBtn" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <span class="wa-float__icon"><i class="bi bi-whatsapp"></i></span>
+    <span class="wa-float__text d-none d-md-inline">WhatsApp</span>
+  </a>
+
+  <!-- MODAL INFO -->
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="bi bi-info-circle"></i> Info rápida</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-secondary">
+          <ul class="mb-0">
+            <li>Consultas y pedidos por WhatsApp</li>
+            <li>Retiro en local y envíos (según zona)</li>
+            <li>Stock sujeto a disponibilidad</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-success" id="waModalLink" target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp"></i> Escribir por WhatsApp
+          </a>
+          <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL PRODUCTO (dinámico) -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content rounded-4 overflow-hidden">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pmTitle">Producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-5">
+              <div class="pm-imgbox">
+                <img id="pmImg" src="" alt="Producto" />
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="d-flex flex-wrap gap-2 mb-2" id="pmBadges"></div>
+              <p class="text-secondary mb-3" id="pmDesc"></p>
+
+              <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                <div class="pm-price" id="pmPrice"></div>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-dark" data-bs-dismiss="modal">
+                    <i class="bi bi-arrow-left"></i> Seguir viendo
+                  </button>
+                  <a class="btn btn-success" id="pmWhatsApp" target="_blank" rel="noopener">
+                    <i class="bi bi-whatsapp"></i> Consultar
+                  </a>
+                </div>
+              </div>
+
+              <div class="mt-3 small text-secondary">
+                Tip: preguntá por <strong>stock</strong>, <strong>envío</strong> y <strong>medios de pago</strong>.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer bg-light">
+          <div class="d-flex align-items-center gap-2 small text-secondary">
+            <i class="bi bi-shield-check"></i> Atención rápida • <i class="bi bi-truck"></i> Envíos • <i class="bi bi-bag-check"></i> Retiro en local
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Tu JS -->
+  <script src="index.js"></script>
+</body>
+</html>
